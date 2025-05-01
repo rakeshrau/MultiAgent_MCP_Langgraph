@@ -6,6 +6,8 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.prebuilt import create_react_agent
 from langchain_openai import ChatOpenAI
 
+# Load environment variables from .env file
+load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 async def main():
     model = ChatOpenAI(model="gpt-4o")
